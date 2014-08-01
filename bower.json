@@ -1,0 +1,8 @@
+{
+  "name": "shorthand",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.2.20",
+    "angular-route": "~1.2.20"
+  }
+}

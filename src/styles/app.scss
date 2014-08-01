@@ -1,0 +1,60 @@
+@import "normalize-css/normalize"; // Need to rename normalize.css to _normalize.scss
+
+$primary-color: #BBDD4D;
+$header-height: 80px;
+$titlebar-height: 50px;
+
+* {
+	box-sizing: border-box;
+}
+
+.container {
+	padding: 0 30px;
+}
+
+header {
+  height: $header-height;
+  background: $primary-color;
+
+  h1 {
+  	font-size: 18px;
+  	text-transform: uppercase;
+  	margin: 0;
+  	opacity: 0.3;
+  	height: $header-height;
+		line-height: $header-height;
+		font-weight: normal;
+		display: inline-block;
+  }
+
+  nav {
+  	display: none;
+  }
+
+  img#hamburger {
+		float: right;
+  }
+}
+
+section.code-container {
+	float: left;
+	width: 50%;
+
+	.title-bar {
+		height: $titlebar-height;
+		background: #F5F5F5;
+		text-transform: uppercase;
+		color: #999;
+		line-height: $titlebar-height;
+	}
+
+	&#output {
+		border-left: 1px solid #E9E9E9;
+	}
+
+	#editor {
+		position: absolute;
+		width: 50%;
+		height: 500px;
+	}
+}

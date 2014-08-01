@@ -1,0 +1,13 @@
+doctype html
+html(ng-app='shorthand')
+
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title
+    link(href=styles, rel='stylesheet')
+
+  body
+    div(ng-include="'app/navbar/layout.html'")
+    div(ng-view='')
+    script(src=scripts)

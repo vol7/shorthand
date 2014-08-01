@@ -1,0 +1,40 @@
+{
+  "private": "true",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "postinstall": "npm install browserify@4.2.3 gulp-header"
+  },
+  "devDependencies": {
+    "browserify-shim": "^3.6.0",
+    "connect": "^2.19.6",
+    "gulp": "^3.8.0",
+    "gulp-angular-templatecache": "^1.2.1",
+    "gulp-autoprefixer": "0.0.8",
+    "gulp-csso": "^0.2.9",
+    "gulp-if": "^1.2.1",
+    "gulp-imagemin": "^0.6.1",
+    "gulp-jade": "^0.5.0",
+    "gulp-jshint": "^1.6.2",
+    "gulp-livereload": "^2.1.0",
+    "gulp-ng-annotate": "^0.1.1",
+    "gulp-rename": "^1.2.0",
+    "gulp-rimraf": "^0.1.0",
+    "gulp-ruby-sass": "^0.5.0",
+    "gulp-uglify": "^0.3.0",
+    "jshint-stylish": "^0.2.0",
+    "run-sequence": "^0.3.6",
+    "vinyl-source-stream": "^0.1.1",
+    "watchify": "^0.10.2",
+    "yargs": "^1.2.2"
+  },
+  "browser": {
+    "angular": "./bower_components/angular/angular.min.js",
+    "angular-route": "./bower_components/angular-route/angular-route.min.js"
+  },
+  "browserify-shim": {},
+  "dependencies": {
+    "brace": "^0.3.0"
+  }
+}
