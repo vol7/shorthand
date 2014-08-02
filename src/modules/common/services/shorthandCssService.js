@@ -12,6 +12,22 @@ module.exports = /*@ngInject*/
       shorthandProperty: 'font',
       properties: ['font-style', 'font-variant', 'font-weight', 'font-size', 'line-height', 'font-family'],
       shorthandSyntax: 'font-style font-variant font-weight font-size/line-height font-family'
+    }, {
+      shorthandProperty: 'border',
+      properties: ['border-width', 'border-style', 'border-color'],
+      shorthandSyntax: 'border-width border-style border-color'
+    }, {
+      shorthandProperty: 'border',
+      properties: ['border-width', 'border-style', 'border-color'],
+      shorthandSyntax: 'border-width border-style border-color'
+    }, {
+      shorthandProperty: 'outline',
+      properties: ['outline-width', 'outline-style', 'outline-color'],
+      shorthandSyntax: 'outline-width outline-style outline-color'
+    }, {
+      shorthandProperty: 'list-style',
+      properties: ['list-style-type', 'list-style-position', 'list-style-image'],
+      shorthandSyntax: 'list-style-type list-style-position list-style-image'
     }];
 
     return function(cssString) {
