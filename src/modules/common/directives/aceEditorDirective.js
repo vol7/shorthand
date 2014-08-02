@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = /*@ngInject*/
-  function aceEditorDirective() {
+  function aceEditorDirective($timeout) {
     return {
       restrict: 'A',
       link: function (scope, element, attrs) {
@@ -37,8 +37,10 @@ module.exports = /*@ngInject*/
             return editor.getValue();
           };
 
-          editor.on('paste', function() {
-            scope.output();
+          editor.on('paste', function(text) {
+            $timeout(function() {
+              scope.output();
+            }, 1);
           });
         }
       }
