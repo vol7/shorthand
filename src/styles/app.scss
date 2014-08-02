@@ -1,4 +1,4 @@
-@import "normalize-css/normalize"; // Need to rename normalize.css to _normalize.scss
+@import "normalize-css/normalize";
 
 $primary-color: #BBDD4D;
 $header-height: 60px;
@@ -13,6 +13,7 @@ body {
   font-family: 'Gotham SSm A', 'Gotham SSm B';
   font-weight: 400;
   font-style: normal;
+  font-size: 11px;
 }
 
 .container {
@@ -49,7 +50,6 @@ section.code-container {
 
 	.title-bar {
 		height: $header-height/1.5;
-    font-size: 11px;
 		background: #F5F5F5;
 		text-transform: uppercase;
 		color: #999;
@@ -69,16 +69,12 @@ section.code-container {
 
 		.ace_gutter {
 			background: white !important;
-<<<<<<< HEAD
-      color: #ccc;
-=======
 			color: #ccc;
 			width: 75px !important;
 
 			.ace_gutter-layer {
 				width: 50px !important;
 			}
->>>>>>> 6ded5652c2fdb973b1cebf3f754ed8b6388ec5dc
 		}
 	}
 }
