@@ -5,3 +5,4 @@ build
 release
 tmp
 bower_components
+/src/assets/.DS_Store

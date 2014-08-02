@@ -34,7 +34,17 @@ header {
 		line-height: $header-height;
 		font-weight: 500;
     letter-spacing: 0.8px;
-		display: inline-block;
+
+    &:after {
+      opacity: 0;
+      content: " By Volume7";
+      transition: all 0.2s ease-in-out;
+      color: darken($primary-color, 12%);
+    }
+
+    &:hover:after {
+      opacity: 1;
+    }
   }
 
   nav {
