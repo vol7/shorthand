@@ -26,9 +26,10 @@ header {
 
   h1 {
   	font-size: 13px;
+    float: left;
   	text-transform: uppercase;
   	margin: 0;
-  	opacity: 0.3;
+    color: darken($primary-color, 18%);
   	height: $header-height;
 		line-height: $header-height;
 		font-weight: 500;
@@ -41,9 +42,44 @@ header {
   }
 
   #menu {
-		float: right;
-    margin-top: 23px;
+    float: right;
+		width: 20px;
+    height: 2px;
+    background: darken($primary-color, 18%);
+    margin-top: 29px;
+    transition: all 0.2s ease-in-out;
+
+    &:after, &:before {
+      content: '';
+      display: block;
+      background: darken($primary-color, 18%);
+      width: 20px;
+      height: 2px;
+      position: relative;
+      top: -8px;
+      transition: all 0.2s ease-in-out;
+    }
+
+    &:before {
+      top: 6px !important;
+    }
+
+    &.menu-open {
+
+      background: $primary-color;
+
+      &:after {
+        top: -2px !important;
+        transform: rotate(-45deg);
+      }
+
+      &:before {
+        top: 0 !important;
+        transform: rotate(45deg);
+      }
+    }
   }
+
 }
 
 section.code-container {
