@@ -1,15 +1,22 @@
 @import "normalize-css/normalize"; // Need to rename normalize.css to _normalize.scss
 
 $primary-color: #BBDD4D;
-$header-height: 80px;
-$titlebar-height: 50px;
+$header-height: 60px;
 
-* {
-	box-sizing: border-box;
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Gotham SSm A', 'Gotham SSm B';
+  font-weight: 400;
+  font-style: normal;
 }
 
 .container {
-	padding: 0 30px;
+	padding: 0 20px;
 }
 
 header {
@@ -17,13 +24,13 @@ header {
   background: $primary-color;
 
   h1 {
-  	font-size: 18px;
+  	font-size: 13px;
   	text-transform: uppercase;
   	margin: 0;
   	opacity: 0.3;
   	height: $header-height;
 		line-height: $header-height;
-		font-weight: normal;
+		font-weight: 500;
 		display: inline-block;
   }
 
@@ -41,11 +48,12 @@ section.code-container {
 	width: 50%;
 
 	.title-bar {
-		height: $titlebar-height;
+		height: $header-height/1.5;
+    font-size: 11px;
 		background: #F5F5F5;
 		text-transform: uppercase;
 		color: #999;
-		line-height: $titlebar-height;
+		line-height: $header-height/1.5;
 		margin-bottom: 20px;
 	}
 
@@ -61,6 +69,7 @@ section.code-container {
 
 		.ace_gutter {
 			background: white !important;
+      color: #ccc;
 		}
 	}
 }
