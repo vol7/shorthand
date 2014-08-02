@@ -4,6 +4,6 @@ section.code-container#input
   #inputEditor(ace-editor)
 
 section.code-container#output
-  .title-bar
+  .title-bar(ng-click='output()')
     .container output
   #outputEditor(ace-editor, readonly="true")

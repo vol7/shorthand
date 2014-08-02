@@ -125,5 +125,9 @@ section.code-container {
         width: 50px !important;
       }
     }
+
+    .ace_bracket, .ace_hidden-cursors {
+      display: none;
+    }
   }
 }

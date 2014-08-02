@@ -35,6 +35,7 @@
   },
   "browserify-shim": {},
   "dependencies": {
-    "brace": "^0.3.0"
+    "brace": "^0.3.0",
+    "css": "^2.0.0"
   }
 }
