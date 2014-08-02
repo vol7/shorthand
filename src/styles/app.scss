@@ -69,7 +69,16 @@ section.code-container {
 
 		.ace_gutter {
 			background: white !important;
+<<<<<<< HEAD
       color: #ccc;
+=======
+			color: #ccc;
+			width: 75px !important;
+
+			.ace_gutter-layer {
+				width: 50px !important;
+			}
+>>>>>>> 6ded5652c2fdb973b1cebf3f754ed8b6388ec5dc
 		}
 	}
 }
