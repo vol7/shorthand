@@ -17,7 +17,7 @@ body {
 }
 
 .container {
-	padding: 0 20px;
+  padding: 0 20px;
 }
 
 header {
@@ -25,14 +25,14 @@ header {
   background: $primary-color;
 
   h1 {
-  	font-size: 13px;
+    font-size: 13px;
     float: left;
-  	text-transform: uppercase;
-  	margin: 0;
+    text-transform: uppercase;
+    margin: 0;
     color: darken($primary-color, 18%);
-  	height: $header-height;
-		line-height: $header-height;
-		font-weight: 500;
+    height: $header-height;
+    line-height: $header-height;
+    font-weight: 500;
     letter-spacing: 0.8px;
 
     &:after {
@@ -48,12 +48,12 @@ header {
   }
 
   nav {
-  	display: none;
+    display: none;
   }
 
   #menu {
     float: right;
-		width: 20px;
+    width: 20px;
     height: 2px;
     background: darken($primary-color, 18%);
     margin-top: 29px;
@@ -93,37 +93,37 @@ header {
 }
 
 section.code-container {
-	float: left;
-	width: 50%;
+  float: left;
+  width: 50%;
 
-	.title-bar {
-		height: $header-height/1.5;
-		background: #F5F5F5;
-		text-transform: uppercase;
-		color: #999;
+  .title-bar {
+    height: $header-height/1.5;
+    background: #F5F5F5;
+    text-transform: uppercase;
+    color: #999;
     letter-spacing: 0.8px;
-		line-height: $header-height/1.5;
-		margin-bottom: 20px;
-	}
+    line-height: $header-height/1.5;
+    margin-bottom: 20px;
+  }
 
-	&#output {
-		border-left: 1px solid #E9E9E9;
-	}
+  &#output {
+    border-left: 1px solid #E9E9E9;
+  }
 
-	.ace_editor {
-		position: relative;
-		width: 100%;
-		height: 500px;
-		border-bottom: 1px solid #E9E9E9;
+  .ace_editor {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    border-bottom: 1px solid #E9E9E9;
 
-		.ace_gutter {
-			background: white !important;
-			color: #ccc;
-			width: 75px !important;
+    .ace_gutter {
+      background: white !important;
+      color: #ccc;
+      width: 75px !important;
 
-			.ace_gutter-layer {
-				width: 50px !important;
-			}
-		}
-	}
+      .ace_gutter-layer {
+        width: 50px !important;
+      }
+    }
+  }
 }
