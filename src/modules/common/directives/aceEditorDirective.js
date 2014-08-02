@@ -19,6 +19,7 @@ module.exports = /*@ngInject*/
         editor.setShowFoldWidgets(false);
         editor.setFontSize(12);
         editor.getSession().setTabSize(2);
+        editor.getSession().setUseWorker(false);
         editor.setValue("body {\n\tfont-size: 1em;\n\tline-height: 1.2em;\n\tfont-family: Helvetica;\n\tfont-weight: 300;\n\tfont-style: italic;\n}");
         editor.clearSelection();
 
@@ -27,13 +28,18 @@ module.exports = /*@ngInject*/
           editor.renderer.$cursorLayer.element.style.opacity = 0;
 
           scope.displayOutput = function(text) {
-            return editor.setValue(text);
+            editor.setValue(text);
+            editor.clearSelection();
           };
         }
         else {
           scope.getInputValue = function() {
             return editor.getValue();
           };
+
+          editor.on('paste', function() {
+            scope.output();
+          });
         }
       }
     };

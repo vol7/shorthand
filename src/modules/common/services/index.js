@@ -1,5 +1,5 @@
 'use strict';
 
 module.exports =
-  angular.module('shorthand.common.services', []);
-//.factory('fooService', require('./fooService'));
+  angular.module('shorthand.common.services', [])
+    .factory('shorthandCss', require('./shorthandCssService'));
