@@ -8,6 +8,7 @@ We're using a bunch of open-source projects:
 * [Gulp] - The streaming build system
 * [Angular] - Superheroic JavaScript MVW Framework
 * [Bower] - A package manager for the web
+* [Pygments] - Generic syntax highlighter
 
 
 ##Installation
