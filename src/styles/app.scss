@@ -2,7 +2,7 @@
 
 $primary-color: #BBDD4D;
 $header-height: 80px;
-$titlebar-height: 50px;
+$titlebar-height: 55px;
 
 * {
 	box-sizing: border-box;
@@ -61,6 +61,12 @@ section.code-container {
 
 		.ace_gutter {
 			background: white !important;
+			color: #ccc;
+			width: 75px !important;
+
+			.ace_gutter-layer {
+				width: 50px !important;
+			}
 		}
 	}
 }
