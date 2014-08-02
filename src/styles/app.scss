@@ -46,15 +46,21 @@ section.code-container {
 		text-transform: uppercase;
 		color: #999;
 		line-height: $titlebar-height;
+		margin-bottom: 20px;
 	}
 
 	&#output {
 		border-left: 1px solid #E9E9E9;
 	}
 
-	#editor {
-		position: absolute;
-		width: 50%;
+	.ace_editor {
+		position: relative;
+		width: 100%;
 		height: 500px;
+		border-bottom: 1px solid #E9E9E9;
+
+		.ace_gutter {
+			background: white !important;
+		}
 	}
 }
