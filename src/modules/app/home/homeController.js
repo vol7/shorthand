@@ -18,7 +18,7 @@ module.exports = /*@ngInject*/
 			editor.setHighlightGutterLine(false);
 			editor.setHighlightSelectedWord(false);
 			editor.setShowFoldWidgets(false);
-			editor.setFontSize(11);
+			editor.setFontSize(12);
 			editor.getSession().setTabSize(2);
 			editor.setValue("body {\n\tcolor: white;\n\tfont-size: 14px;\n}");
 		});
