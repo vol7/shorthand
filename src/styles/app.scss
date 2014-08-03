@@ -16,8 +16,16 @@ body {
   font-size: 11px;
 }
 
+body, html {
+  height: 100%;
+}
+
 .container {
   padding: 0 20px;
+}
+
+div[ng-view] {
+  overflow: auto;
 }
 
 header {
@@ -75,7 +83,6 @@ header {
     }
 
     &.menu-open {
-
       background: $primary-color;
 
       &:after {
@@ -95,6 +102,7 @@ header {
 section.code-container {
   float: left;
   width: 50%;
+  height: 100%;
 
   .title-bar {
     height: $header-height/1.5;
@@ -113,7 +121,7 @@ section.code-container {
   .ace_editor {
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 100%;
     border-bottom: 1px solid #E9E9E9;
 
     .ace_gutter {

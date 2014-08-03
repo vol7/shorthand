@@ -65,36 +65,37 @@ module.exports = /*@ngInject*/
       var cssObject = css.parse(cssString);
 
       cssObject.stylesheet.rules.forEach(function(rule) {
-        var declarations = [];
-        console.log(rule);
+        if (rule.type === "rule") {
+          var declarations = [];
 
-        rule.declarations.forEach(function(declaration) {
-          declarations[declaration.property] = declaration;
-        });
+          rule.declarations.forEach(function(declaration) {
+            declarations[declaration.property] = declaration;
+          });
 
-        shorthands.forEach(function(shorthand) {
-          var shorthandValue = shorthand.getShorthandValue(shorthand, declarations);
+          shorthands.forEach(function(shorthand) {
+            var shorthandValue = shorthand.getShorthandValue(shorthand, declarations);
 
-          if (shorthandValue !== "") {
-            var newDeclarations = [];
+            if (shorthandValue !== "") {
+              var newDeclarations = [];
 
-            // Add the new shorthand property
-            newDeclarations.push({
-              type: 'declaration',
-              property: shorthand.shorthandProperty,
-              value: shorthandValue
-            });
+              // Add the new shorthand property
+              newDeclarations.push({
+                type: 'declaration',
+                property: shorthand.shorthandProperty,
+                value: shorthandValue
+              });
 
-            // Remove the long properties
-            rule.declarations.forEach(function(declaration) {
-              if (shorthand.properties.indexOf(declaration.property) <= -1) {
-                newDeclarations.push(declaration);
-              }
-            });
+              // Remove the long properties
+              rule.declarations.forEach(function(declaration) {
+                if (shorthand.properties.indexOf(declaration.property) <= -1) {
+                  newDeclarations.push(declaration);
+                }
+              });
 
-            rule.declarations = newDeclarations;
-          }
-        });
+              rule.declarations = newDeclarations;
+            }
+          });
+        }
       });
 
       return css.stringify(cssObject);
