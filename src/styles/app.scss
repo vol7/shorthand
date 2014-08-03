@@ -14,6 +14,8 @@ body {
   font-weight: 500;
   font-style: normal;
   font-size: 11px;
+  display: flex;
+  flex-direction: column;
 }
 
 body, html {
@@ -22,10 +24,17 @@ body, html {
 
 .container {
   padding: 0 20px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
 
 div[ng-view] {
   overflow: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  flex: 1;
 }
 
 header {
@@ -33,8 +42,9 @@ header {
   background: $primary-color;
 
   h1 {
+    display: flex;
+    align-self: flex-start;
     font-size: 13px;
-    float: left;
     text-transform: uppercase;
     margin: 0;
     color: darken($primary-color, 18%);
@@ -60,7 +70,7 @@ header {
   }
 
   #menu {
-    float: right;
+    margin-left: auto;
     width: 20px;
     height: 2px;
     background: darken($primary-color, 18%);
@@ -100,9 +110,9 @@ header {
 }
 
 section.code-container {
-  float: left;
-  width: 50%;
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 
   .title-bar {
     height: $header-height/1.5;
@@ -119,9 +129,7 @@ section.code-container {
   }
 
   .ace_editor {
-    position: relative;
-    width: 100%;
-    height: 100%;
+    flex: 1;
     border-bottom: 1px solid #E9E9E9;
 
     .ace_gutter {
