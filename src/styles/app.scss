@@ -2,18 +2,20 @@
 
 $primary-color: #BBDD4D;
 $header-height: 60px;
+$border-color: #E9E9E9;
 
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: always;
 }
 
 body {
-  font-family: 'Gotham SSm A', 'Gotham SSm B';
-  font-weight: 500;
-  font-style: normal;
-  font-size: 11px;
+  font: normal 500 11px 'Gotham SSm A', 'Gotham SSm B', sans-serif;
   display: flex;
   flex-direction: column;
 }
@@ -25,31 +27,48 @@ body, html {
 .container {
   padding: 0 20px;
   display: flex;
-  flex-direction: row;
   width: 100%;
 }
 
 div[ng-view] {
   overflow: auto;
   display: flex;
-  flex-direction: row;
   align-items: stretch;
+  justify-content: center;
   flex: 1;
+  position: absolute;
+  top: $header-height;
+  bottom: 0;
+  width: 100%;
+
+  &.ng-enter, &.ng-leave {
+    transition: 0.2s linear opacity;
+  }
+
+  &.ng-enter, &.ng-leave.ng-leave-active {
+    opacity: 0;
+  }
+
+  &.ng-leave, &.ng-enter.ng-enter-active {
+    opacity: 1;
+  }
 }
 
 header {
   height: $header-height;
   background: $primary-color;
 
+  display: flex;
+  align-items: center;
+
   h1 {
     display: flex;
     align-self: flex-start;
+
     font-size: 13px;
     text-transform: uppercase;
     margin: 0;
     color: darken($primary-color, 18%);
-    height: $header-height;
-    line-height: $header-height;
     font-weight: 500;
     letter-spacing: 0.8px;
 
@@ -69,12 +88,12 @@ header {
     display: none;
   }
 
-  #menu {
+  #about-button {
     margin-left: auto;
+    cursor: pointer;
     width: 20px;
     height: 2px;
     background: darken($primary-color, 18%);
-    margin-top: 29px;
     transition: all 0.2s ease-in-out;
 
     &:after, &:before {
@@ -125,12 +144,17 @@ section.code-container {
   }
 
   &#output {
-    border-left: 1px solid #E9E9E9;
+    border-left: 1px solid $border-color;
   }
 
   .ace_editor {
     flex: 1;
-    border-bottom: 1px solid #E9E9E9;
+    border-bottom: 1px solid $border-color;
+
+    .ace_scroller.ace_scroll-left {
+      box-shadow: none !important;
+      border-left: 1px solid $border-color;
+    }
 
     .ace_gutter {
       background: white !important;
@@ -144,6 +168,39 @@ section.code-container {
 
     .ace_bracket, .ace_hidden-cursors {
       display: none;
+    }
+  }
+}
+
+section#about {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  padding: 10vh 0;
+
+  .info-block {
+    flex: 1 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h2 {
+      font-weight: normal;
+      font-size: 18px;
+      color: #666;
+      line-height: 22px;
+      letter-spacing: 0px;
+      margin: 0;
+    }
+
+    p {
+      font-size: 14px;
+      color: #999;
+      line-height: 22px;
+      letter-spacing: 0px;
+      margin: 15px 0 0 0;
     }
   }
 }

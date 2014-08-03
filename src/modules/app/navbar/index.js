@@ -1,11 +1,5 @@
 'use strict';
 
 module.exports =
-  angular.module('shorthand.navbar', []).config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'app/navbar/layout.html',
-        controller: 'navbarController'
-      });
-    })
+  angular.module('shorthand.navbar', [])
   .controller('navbarController', require('./navbarController'));
