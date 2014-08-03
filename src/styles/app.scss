@@ -8,10 +8,6 @@ $light-grey: #ddd;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-
-  // -webkit-font-smoothing: antialiased;
-  // -moz-osx-font-smoothing: grayscale;
-  // font-smooth: always;
 }
 
 body {
@@ -97,7 +93,7 @@ header {
       display: inline-block;
       margin-left: 6px;
       content: "By Volume7";
-      transition: all 0.2s ease-in-out;
+      transition: opacity 0.2s ease-in-out;
       color: darken($primary-color, 12%);
     }
 
@@ -131,6 +127,7 @@ section.code-container {
     letter-spacing: 0.8px;
     line-height: $header-height/1.5;
     font-weight: 500;
+    margin-bottom: 20px;
   }
 
   &#input {
@@ -155,7 +152,6 @@ section.code-container {
       background: white !important;
       color: darken($light-grey, 5%);
       width: 65px !important;
-      padding-top: 20px;
 
       .ace_gutter-layer {
         width: 40px !important;
@@ -163,10 +159,6 @@ section.code-container {
     }
 
     .ace_scroller {
-
-      .ace_content {
-        padding-top: 20px;
-      }
 
       &.ace_scroll-left {
         box-shadow: none;
