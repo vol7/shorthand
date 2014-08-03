@@ -2,7 +2,7 @@
 
 $primary-color: #BBDD4D;
 $header-height: 60px;
-$border-color: #E9E9E9;
+$light-grey: #ddd;
 
 *, *:before, *:after {
   -moz-box-sizing: border-box;
@@ -125,7 +125,6 @@ header {
       }
     }
   }
-
 }
 
 section.code-container {
@@ -140,21 +139,25 @@ section.code-container {
     color: #999;
     letter-spacing: 0.8px;
     line-height: $header-height/1.5;
-    margin-bottom: 20px;
   }
 
+  &#input {
+      #clear {
+        display: block;
+        margin-left: auto;
+        width: 16px;
+        height: 16px;
+        background-image: url('/assets/images/clear.svg');
+        margin-top: ($header-height/1.5/2)-8; // Center close icon
+      }
+    }
+
   &#output {
-    border-left: 1px solid $border-color;
+    border-left: 1px solid $light-grey;
   }
 
   .ace_editor {
     flex: 1;
-    border-bottom: 1px solid $border-color;
-
-    .ace_scroller.ace_scroll-left {
-      box-shadow: none !important;
-      border-left: 1px solid $border-color;
-    }
 
     .ace_gutter {
       background: white !important;
@@ -163,6 +166,16 @@ section.code-container {
 
       .ace_gutter-layer {
         width: 40px !important;
+        padding-top: 20px;
+      }
+    }
+
+    .ace_scroller {
+      padding-top: 20px;
+
+      &.ace_scroll-left {
+        box-shadow: none;
+        border-left: 1px solid lighten($light-grey, 5%);
       }
     }
 
