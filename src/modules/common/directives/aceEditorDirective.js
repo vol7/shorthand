@@ -37,10 +37,20 @@ module.exports = /*@ngInject*/
             return editor.getValue();
           };
 
+          // Generate output on paste
           editor.on('paste', function(text) {
-            $timeout(function() {
+            $timeout(function() { // Workaround because if we dont wait, we dont get the new pasted content
               scope.output();
             }, 1);
+          });
+
+          // Generate output on change
+          var editorChangePromise;
+          editor.on('change', function(text) {
+            $timeout.cancel(editorChangePromise);
+            editorChangePromise = $timeout(function() {
+              scope.output();
+            }, 300);
           });
         }
       }
