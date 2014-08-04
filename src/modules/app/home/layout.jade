@@ -1,10 +1,10 @@
 section.code-container#input
   .title-bar
     .container input
-      span#clear
+      span#clear(ng-click='clearInput()')
   #inputEditor(ace-editor)
 
 section.code-container#output
   .title-bar
     .container output
-  #outputEditor(ace-editor, readonly="true")
+  #outputEditor(ace-editor, readonly='true')

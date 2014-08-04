@@ -113,12 +113,17 @@ section.code-container {
 
   &#input {
     #clear {
+      cursor: pointer;
       display: block;
       margin-left: auto;
       width: 16px;
       height: 16px;
       background-image: url('/assets/images/clear.svg');
       margin-top: ($header-height/1.5/2)-8; // Center close icon
+
+      &:hover {
+        opacity: 0.8;
+      }
     }
   }
 

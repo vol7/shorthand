@@ -37,6 +37,10 @@ module.exports = /*@ngInject*/
             return editor.getValue();
           };
 
+          scope.clearInput = function() {
+            editor.setValue('');
+          };
+
           // Generate output on paste
           editor.on('paste', function(text) {
             $timeout(function() { // Workaround because if we dont wait, we dont get the new pasted content
