@@ -73,14 +73,9 @@ div[ng-view] {
 header {
   height: $header-height;
   background: $primary-color;
-
-  display: flex;
-  align-items: center;
+  line-height: $header-height;
 
   h1 {
-    display: flex;
-    align-self: flex-start;
-
     font-size: 13px;
     text-transform: uppercase;
     margin: 0;
@@ -102,14 +97,10 @@ header {
     }
   }
 
-  nav {
-    display: none;
-  }
-
   #about-button {
     margin-left: auto;
     cursor: pointer;
-    width: 20px;
+    width: 12px;
     transition: all 0.2s ease-in-out;
   }
 }
