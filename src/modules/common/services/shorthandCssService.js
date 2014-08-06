@@ -63,6 +63,7 @@ module.exports = /*@ngInject*/
 
     return function(cssString) {
       var cssObject = css.parse(cssString);
+      var longPropertiesPositions = [];
 
       cssObject.stylesheet.rules.forEach(function(rule) {
         if (rule.type === "rule") {
@@ -85,10 +86,13 @@ module.exports = /*@ngInject*/
                 value: shorthandValue
               });
 
-              // Remove the long properties
+              // Add properties having nothing to do with the rule being shorthanded
               rule.declarations.forEach(function(declaration) {
                 if (shorthand.properties.indexOf(declaration.property) <= -1) {
                   newDeclarations.push(declaration);
+                }
+                else {
+                  longPropertiesPositions.push(declaration.position);
                 }
               });
 
@@ -98,6 +102,9 @@ module.exports = /*@ngInject*/
         }
       });
 
-      return css.stringify(cssObject);
+      return {
+        string: css.stringify(cssObject),
+        longPropertiesPositions: longPropertiesPositions
+      };
     };
   };

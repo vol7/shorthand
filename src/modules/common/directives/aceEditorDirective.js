@@ -8,6 +8,7 @@ module.exports = /*@ngInject*/
         var ace = require('brace');
         require('brace/mode/css');
         require('brace/theme/tomorrow');
+        var Range = ace.acequire('ace/range').Range;
 
         var editor = ace.edit(element[0]); // We use [0] since 'element' is a jQLite object and we want a vanilla one
 
@@ -37,6 +38,10 @@ module.exports = /*@ngInject*/
 
           scope.getInputValue = function() {
             return editor.getValue();
+          };
+
+          scope.highlightInput = function(startRow, startColumn, endRow, endColumn) {
+            editor.session.addMarker(new Range(startRow, startColumn, endRow, endColumn), "ace_active-line", "text");
           };
 
           scope.clearInput = function() {
