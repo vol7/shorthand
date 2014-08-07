@@ -9,4 +9,6 @@ module.exports =
     require('./home').name,
     require('./about').name,
     require('./navbar').name
-  ]);
+  ]).config(function($locationProvider) {
+    $locationProvider.html5Mode(true);
+  });
