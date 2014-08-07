@@ -17,7 +17,7 @@ module.exports = gulp.task('styles', function () {
     .pipe(sass({
       loadPath: ['bower_components']
     }).on('error', handleError))
-    .pipe(autoprefixer('last 1 version'))
+    .pipe(autoprefixer('last 1 version', '> 1%', 'ie 8', 'ie 7'))
     .pipe(gulpif(release, csso()))
     .pipe(gulpif(release, rename(config.filenames.release.styles), rename(config.filenames.build.styles)))
     .pipe(gulpif(release, gulp.dest(config.paths.dest.release.styles), gulp.dest(config.paths.dest.build.styles)));

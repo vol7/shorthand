@@ -105,16 +105,26 @@ header {
   nav {
     margin-left: auto;
     margin-top: 3px;
-    
+
     #about-button {
       cursor: pointer;
       width: 12px;
+      transition: opacity 0.2s ease-in-out;
+
+      &:hover {
+        opacity: 0.8;
+      }
     }
 
     #github-button {
       cursor: pointer;
       width: 19px;
       margin-right: 15px;
+      transition: opacity 0.2s ease-in-out;
+
+      &:hover {
+        opacity: 0.8;
+      }
     }
   }
 }

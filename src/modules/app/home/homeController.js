@@ -16,6 +16,7 @@ module.exports = /*@ngInject*/ function ($scope, shorthandCss) {
 
   $scope.clearInput = function() {
     $scope.inputEditor.setValue('');
+    $scope.outputEditor.setValue('');
   };
 
 };
