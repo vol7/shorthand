@@ -20,6 +20,11 @@ body, html {
   height: 100%;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 p {
   font-size: 14px;
   line-height: 22px;
@@ -81,7 +86,7 @@ header {
     margin: 0;
     color: darken($primary-color, 18%);
     font-weight: 500;
-    letter-spacing: 0.8px;
+    letter-spacing: 1px;
 
     &:after {
       opacity: 0;
@@ -97,11 +102,20 @@ header {
     }
   }
 
-  #about-button {
+  nav {
     margin-left: auto;
-    cursor: pointer;
-    width: 12px;
-    transition: all 0.2s ease-in-out;
+    margin-top: 3px;
+    
+    #about-button {
+      cursor: pointer;
+      width: 12px;
+    }
+
+    #github-button {
+      cursor: pointer;
+      width: 19px;
+      margin-right: 15px;
+    }
   }
 }
 
@@ -115,7 +129,7 @@ section.code-container {
     background: #F5F5F5;
     text-transform: uppercase;
     color: #999;
-    letter-spacing: 0.8px;
+    letter-spacing: 1px;
     line-height: $header-height/1.5;
     font-weight: 500;
     margin-bottom: 20px;
