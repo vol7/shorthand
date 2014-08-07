@@ -23,29 +23,25 @@ module.exports = /*@ngInject*/
         editor.getSession().setUseWorker(false);
 
         if (attrs.readonly) {
+          scope.outputEditor = editor;
+
           editor.setValue("body {\n\tfont: italic 300 1em/1.2em Helvetica;\n}");
 
           editor.setReadOnly(true);
           editor.renderer.$cursorLayer.element.style.opacity = 0;
 
-          scope.displayOutput = function(text) {
-            editor.setValue(text);
-            editor.clearSelection();
+          scope.removeOutputPlaceholder = function() {
+            element.removeClass('placeholder');
+            editor.setValue('');
           };
         }
         else {
-          editor.setValue("body {\n\tfont-size: 1em;\n\tline-height: 1.2em;\n\tfont-family: Helvetica;\n\tfont-weight: 300;\n\tfont-style: italic;\n}");
+          scope.inputEditor = editor;
 
-          scope.getInputValue = function() {
-            return editor.getValue();
-          };
+          editor.setValue("body {\n\tfont-size: 1em;\n\tline-height: 1.2em;\n\tfont-family: Helvetica;\n\tfont-weight: 300;\n\tfont-style: italic;\n}");
 
           scope.highlightInput = function(startRow, startColumn, endRow, endColumn) {
             editor.session.addMarker(new Range(startRow, startColumn, endRow, endColumn), "ace_active-line", "text");
-          };
-
-          scope.clearInput = function() {
-            editor.setValue('');
           };
 
           // Generate output on paste
@@ -63,6 +59,18 @@ module.exports = /*@ngInject*/
               scope.output();
             }, 300);
           });
+
+          editor.on('focus', function() {
+            scope.removeInputPlaceholder();
+            scope.removeOutputPlaceholder();
+
+            editor.removeAllListeners('focus');
+          });
+
+          scope.removeInputPlaceholder = function() {
+            element.removeClass('placeholder');
+            editor.setValue('');
+          };
         }
 
         editor.clearSelection(); // Needed because initial setValue highlights all text

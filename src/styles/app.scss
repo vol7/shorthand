@@ -166,6 +166,12 @@ section.code-container {
     .ace_bracket, .ace_hidden-cursors {
       display: none;
     }
+
+    &.placeholder {
+      .ace_content {
+        opacity: 0.5;
+      }
+    }
   }
 }
 
