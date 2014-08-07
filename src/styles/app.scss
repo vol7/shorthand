@@ -81,7 +81,7 @@ header {
     margin: 0;
     color: darken($primary-color, 18%);
     font-weight: 500;
-    letter-spacing: 0.8px;
+    letter-spacing: 1px;
 
     &:after {
       opacity: 0;
@@ -124,7 +124,7 @@ section.code-container {
     background: #F5F5F5;
     text-transform: uppercase;
     color: #999;
-    letter-spacing: 0.8px;
+    letter-spacing: 1px;
     line-height: $header-height/1.5;
     font-weight: 500;
     margin-bottom: 20px;
