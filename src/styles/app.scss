@@ -97,11 +97,20 @@ header {
     }
   }
 
-  #about-button {
+  nav {
     margin-left: auto;
-    cursor: pointer;
-    width: 12px;
-    transition: all 0.2s ease-in-out;
+    margin-top: 3px;
+    
+    #about-button {
+      cursor: pointer;
+      width: 12px;
+    }
+
+    #github-button {
+      cursor: pointer;
+      width: 19px;
+      margin-right: 15px;
+    }
   }
 }
 
