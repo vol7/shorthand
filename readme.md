@@ -1,24 +1,27 @@
-#CSS Shorthand Generator
-####by Alexander Haniotis and Francis Marineau
+# CSS Shorthand Generator
+#### by Alexander Haniotis and Francis Marineau
 
-##Tech
+
+## Tech
 
 We're using a bunch of open-source projects:
 
-* [Gulp] - The streaming build system
-* [Angular] - Superheroic JavaScript MVW Framework
-* [Bower] - A package manager for the web
-* [Pygments] - Generic syntax highlighter
+* [Gulp](https://github.com/gulpjs/gulp/) - The streaming build system
+* [Angulpify](https://github.com/jgoux/generator-angulpify) - The yeoman generator used to scaffold this project
+* [Browserify](https://github.com/substack/node-browserify) - Used to structure the code and easily include npm-only css parsers
+* [Angular](https://github.com/angular/angular.js) - JavaScript MVC Framework
+* [Ace Editor](https://github.com/ajaxorg/ace) - For syntax highlighting and more
 
 
-##Installation
+## Setting up the environment
 
 ```sh
-$ npm install
+$ git clone git@github.com:frankmarineau/shorthand.git
+$ cd shorthand
 $ bower install
-$ cd /path/to/shorthand
+$ npm install
 $ gulp
 ```
 
-##Gulp
-Grunt will start a local server on port 8080 (http://localhost:8080)
+## Server
+Gulp will start a local server on port 8080 [http://localhost:8080](http://localhost:8080)

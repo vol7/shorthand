@@ -4,6 +4,6 @@
   "dependencies": {
     "angular": "~1.2.20",
     "angular-route": "~1.2.20",
-    "normalize-css": "~3.0.1"
+    "modularized-normalize-scss": "~3.0.1"
   }
 }
