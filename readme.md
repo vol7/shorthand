@@ -7,7 +7,6 @@
 We're using a bunch of open-source projects:
 
 * [shrthnd.js](https://github.com/frankmarineau/shrthnd.js) - The CSS shortening engine
-
 * [Gulp](https://github.com/gulpjs/gulp/) - The streaming build system
 * [Angulpify](https://github.com/jgoux/generator-angulpify) - The yeoman generator used to scaffold this project
 * [Browserify](https://github.com/substack/node-browserify) - Used to structure the code and easily include npm-only css parsers
