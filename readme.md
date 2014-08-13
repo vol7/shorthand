@@ -26,3 +26,11 @@ $ gulp
 
 ## Server
 Gulp will start a local server on port 8080 [http://localhost:8080](http://localhost:8080)
+
+
+## Volume7
+
+Montreal-based digital agency
+
+[@alexhaniotis](http://twitter.com/alexhaniotis/)
+[@frankmarineau](http://twitter.com/frankmarineau/)
