@@ -1,9 +1,0 @@
-{
-  "name": "shorthand",
-  "private": true,
-  "dependencies": {
-    "angular": "~1.2.20",
-    "angular-route": "~1.2.20",
-    "modularized-normalize-scss": "~3.0.1"
-  }
-}
